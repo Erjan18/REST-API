@@ -4,10 +4,12 @@ from .views import *
 urlpatterns = [
     path ('',purchase_list,name='purchase'),
     path('purchase-list/',purchaseList,name='purchase-list'),
-    path('purchase_create/',purchase_create,name='purchase_create'),
-    path('purchase-detail/<int:pk>/',purchaseDetailList,name='purchase-detail'),
-    path('update/<int:pk>/',update,name='update'),
-    path('delete/<int:pk>/',delete,name='delete'),
-    path('status/',status,name=status)
+    path('purchase_create/<int:pk>/',purchase_create,name='purchase_create'),
+    # path('purchase-detail/<int:pk>/',purchaseDetailList,name='purchase-detail'),
+    path('purchaseUpdate/<int:pk>/',purchaseUpdate,name='update'),
+    # path('delete/<int:pk>/',delete,name='delete'),
+    path('purchaseStatus/',purchaseStatus,name='status'),
+    path('purchaseDelete/<int:pk>/',purchaseDelete,name='putrchaseDelete'),
+    path('accountregister/',accountregister,name='accountregister')
 
 ]
